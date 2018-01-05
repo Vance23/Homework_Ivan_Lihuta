@@ -14,8 +14,8 @@ print(current_date1)
 name = 'Mark Zukerberg'
 name.split(' ')
 name_1st = name.split(' ')
-tabl = ' '
-print(name_1st[1] + tabl + name_1st[0])
+space = ' '
+print(name_1st[1] + space + name_1st[0])
 
 
 #Ex. 9 (В Питоне 3.6 появились: f'' строки, которые разрешают произвольные выражения в формате: s = 'aBc def'; print(f'{s.title()}') --> Abc Def)
@@ -50,4 +50,14 @@ death = ((writer2[2])[0:4])
 age1 = int(death) - int(birth)
 print(writer2[0] + ',' + str(age1))
 
-# (остался вопрос: можно ли используя сплит включать два разделителя * и -, у меня неполучилось)
+# вариант решения 3 (использовал import re)
+
+import re
+
+writer3 = re.split('[*-]', 'Leo Tolstoy*1828-08-28*1910-11-20')
+birth1 = (writer3[1])
+death1 = (writer3[4])
+age1 = int(death1) - int(birth1)
+print(writer3[0] + ',' + str(age1))
+
+

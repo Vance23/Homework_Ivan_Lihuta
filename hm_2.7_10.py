@@ -5,7 +5,7 @@ current_date = '05.17.2016'
 month = str(current_date[0:2])
 day = str(current_date[3:5])
 year = str(current_date[6:10])
-point =('.')
+point = '.'
 current_date1 = str(day + point + month + point + year)
 print(current_date1)
 
@@ -14,7 +14,7 @@ print(current_date1)
 name = 'Mark Zukerberg'
 name.split(' ')
 name_1st = name.split(' ')
-tabl = (' ')
+tabl = ' '
 print(name_1st[1] + tabl + name_1st[0])
 
 
@@ -45,8 +45,8 @@ print (writer1 + ',' + str(age))
 # вариант решения 2
 
 writer2 = writer.split('*')
-birth = str((writer2[1])[0:4])
-death = str ((writer2[2])[0:4])
+birth = ((writer2[1])[0:4])
+death = ((writer2[2])[0:4])
 age1 = int(death) - int(birth)
 print(writer2[0] + ',' + str(age1))
 

@@ -44,5 +44,3 @@ def triangle_square_and_perimeter(a, b):
     P = a + b + c
     return (S, round(P,1))
 print(triangle_square_and_perimeter(12, 15))
-
-

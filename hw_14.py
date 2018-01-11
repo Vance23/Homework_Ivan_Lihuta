@@ -1,13 +1,21 @@
+# но ведь по нижеуказанном варианте 1 так и происходит: при значении = 10 возвращает True, при = 11 - False, т.е. условие выполняется?
+
+#Вариант решения 1 
+# вставляем 10, выдает True
 def is_even(number):
-    '''проверка четности некоторого числа'''
-    print (is_even.__doc__)
-    return ('Even:', number % 2 == 0)
+    return (number % 2 == 0)
 print (is_even(10))
+
+# вставляем 11, выдает False
+def is_even(number):
+    return (number % 2 == 0)
+print (is_even(11))
 print (' ')
 
-def is_uneven(number):
-    '''проверка не четности некоторого числа'''
-    print (is_uneven.__doc__)
-    return ('Unven:', number % 2 != 0)
-print (is_uneven(11))
-
+# Вариант решения 2 (пока не разобрался как это привести в одну строку, буду еще пробывать) 
+def is_even(x):False
+    if x % 2 == 0:
+        return True
+    else:
+        return False
+print (is_even(10))

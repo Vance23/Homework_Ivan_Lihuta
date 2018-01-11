@@ -40,7 +40,7 @@ def triangle_square_and_perimeter(a, b):
     '''Площадь треугольника и его периметр:'''
     print (triangle_square_and_perimeter.__doc__)
     c = math.sqrt(a**2 + b**2)
-    S = 1 / 2 * a * b
-    P = a + b + c
+    s = 1 / 2 * a * b
+    p = a + b + c
     return (S, round(P,1))
 print(triangle_square_and_perimeter(12, 15))

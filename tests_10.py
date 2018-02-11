@@ -1,26 +1,31 @@
 import random
 
+total_user_victory = 0
+total_comp_victory = 0
 
 while True:
 
     ROCK = 1
     SCISSORS = 2
     PAPER = 3
-    QUIT = 4
+    QUIT = 'q'
 
-    user = int(input('Choice: Rock(1), Scissors (2), Paper(3), Quit(4):\n'))
 
-    if user == 4:
+    user_choice = input('Choice: Rock(1), Scissors (2), Paper(3), Quit("q"):\n')
+
+    if user_choice == QUIT:
         print ('Bye!')
         break
 
-    if user == ROCK:
+    user_choice = int(user_choice)
+
+    if user_choice == ROCK:
         print('Rock!')
 
-    elif user == SCISSORS:
+    elif user_choice == SCISSORS:
         print('Scissors!')
 
-    elif user == PAPER:
+    elif user_choice == PAPER:
         print('Paper!')
 
     else:
@@ -39,36 +44,31 @@ while True:
     elif comp == PAPER:
         print('Paper!')
 
-    if comp == user:
+    if comp == user_choice:
         print('Draw!')
 
-    elif comp == SCISSORS and user == ROCK or comp == PAPER and user == SCISSORS or comp == ROCK and user == PAPER:
+    elif comp == SCISSORS and user_choice == ROCK \
+            or comp == PAPER and user_choice == SCISSORS\
+            or comp == ROCK and user_choice == PAPER:
         print('You won!')
 
-        total_user_victory = 0
-        while total_user_victory < 3:
-            total_user_victory = total_user_victory + 1
+        if total_user_victory < 2:
+            total_user_victory += 1
+            print('\n\n\n')
+            continue
         else:
             print('Game Over!')
         break
 
     else:
         print('Comp won!')
-        total_comp_victory = 0
-        while total_comp_victory < 3:
-            total_comp_victory = total_comp_victory + 1
+        if total_comp_victory < 2:
+            total_comp_victory += 1
+            print('\n\n\n')
+            continue
         else:
             print('Game Over!')
         break
 
 
-
-
-
-
-
-
-
-
-
-
+    print('\n\n\n')
